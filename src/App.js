@@ -1,29 +1,28 @@
 import React from 'react';
 import './App.css';
 import Header from './components/Header/Header';
-import PostDetails from './components/PostDetails/PostDetails';
+import Home from './components/Home/Home';
 import {
   BrowserRouter as Router,
   Switch,
   Route
 } from "react-router-dom";
 import Error from './components/Error/Error';
+import PostWithComments from './components/PostWithComments/PostWithComments';
 
 function App() {
   return (
-    // <div>
-    //   <Header></Header>
-    //   <PostDetails></PostDetails>
-    // </div>
     <Router>
+      <Header></Header>
       <Switch>
-        <Route path="/post">
-          <PostDetails></PostDetails>
+        <Route path="/home">
+          <Home></Home>
         </Route>
-        
         <Route exact path="/">
-        <Header></Header>
-        <PostDetails></PostDetails>
+          <Home></Home>
+        </Route>
+        <Route path="/postWithComments/:postId">
+          <PostWithComments></PostWithComments>
         </Route>
         <Route path="*">
           <Error></Error>

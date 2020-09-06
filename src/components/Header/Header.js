@@ -5,6 +5,7 @@ import Typography from '@material-ui/core/Typography';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 import { Container } from '@material-ui/core';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
     return (
@@ -15,7 +16,7 @@ const Header = () => {
                         <MenuIcon />
                     </IconButton>
                     <Typography variant="h6">
-                        Social Buddy
+                        <Link style={{ textDecoration: 'none',color:'white' }} to="/">Social Buddy</Link>
                     </Typography>
                 </Toolbar>
             </AppBar>
